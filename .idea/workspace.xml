@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b933bc8-9eed-4358-bf5f-7647f6c1301d" name="Default Changelist" comment="">
+    <list default="true" id="1b933bc8-9eed-4358-bf5f-7647f6c1301d" name="Default Changelist" comment="2">
       <change afterPath="$PROJECT_DIR$/../Comparator/src/CreateComparator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/package-info.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/config/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/model/Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/model/FileType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/model/Thing.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/package-info.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/ui/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/everything-plus.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/src/CopyTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/src/MyFile.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/src/SerializableTest.java" afterDir="false" />
@@ -61,9 +56,6 @@
       <change afterPath="$PROJECT_DIR$/../题集/src/test5.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../题集/src/tree_question/IsBalanceTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Util.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Thread/src/create_thread/RunableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/src/create_thread/RunableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sort/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/BubbleSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sort/src/FastSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/FastSort.java" afterDir="false" />
@@ -201,15 +193,24 @@
       <workItem from="1577262174972" duration="8639000" />
       <workItem from="1577425924681" duration="1070000" />
       <workItem from="1577499074237" duration="2258000" />
-      <workItem from="1577503573457" duration="14116000" />
+      <workItem from="1577503573457" duration="14768000" />
     </task>
+    <task id="LOCAL-00001" summary="2">
+      <created>1577519492371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577519492371</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="150" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577517127739">
@@ -224,10 +225,10 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="364" y="310" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1292.768@0.0.1292.768" timestamp="1577513409546" />
-    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577519430132">
+    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577519473218">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577519430132" />
+    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577519473218" />
     <state x="426" y="126" key="FileChooserDialogImpl" timestamp="1577513221373">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -256,10 +257,10 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="149" y="0" key="SettingsEditor/0.0.1292.768@0.0.1292.768" timestamp="1577513233064" />
-    <state x="238" y="118" key="Vcs.Push.Dialog.v2" timestamp="1577519289485">
+    <state x="238" y="118" key="Vcs.Push.Dialog.v2" timestamp="1577519523405">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="238" y="118" key="Vcs.Push.Dialog.v2/0.0.1292.768@0.0.1292.768" timestamp="1577519289485" />
+    <state x="238" y="118" key="Vcs.Push.Dialog.v2/0.0.1292.768@0.0.1292.768" timestamp="1577519523405" />
     <state x="440" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577504599489">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
