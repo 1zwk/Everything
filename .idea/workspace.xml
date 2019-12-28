@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b933bc8-9eed-4358-bf5f-7647f6c1301d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Comparator/src/CreateComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/config/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/ui/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FileTest/src/CopyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FileTest/src/MyFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FileTest/src/SerializableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MyIO/src/IO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review/src/MaxNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Seek/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/LineState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/Question/PrintABC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/ThreadUtil/MyBlockQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/ThreadUtil/MyThreadPond.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/ThreadUtil/MyTimer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/ThreadUtil/MyTimer2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/ThreadUtil/ProduceAndConsume.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/common_function/Lesson2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/common_function/UnsafeThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/create_thread/NoNameCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/dan_li/Sington.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/safe_question/FileOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/safe_question/SafeThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thread/src/safe_question/SynchronizedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/Test4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_Comparable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_LinkedList/PartitonList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_arithmetic/WholeArrange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/BuyApple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/CountBackZero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/CountRabbit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/CountSuger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/Gcb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/MinCommonNum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/NoAddAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/NotTwo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/NumClassify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/SecretWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_intelligence/ZouFangGe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/BigAddBig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/DeleteSameString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/JianBingSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/JudgeHuiWen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/NiKeCheSi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/PrintSquare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/PrintStar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/question_string/ReverseInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/quetion_MapSet/CountBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/test5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../题集/src/tree_question/IsBalanceTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thread/src/create_thread/RunableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/src/create_thread/RunableTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort/src/FastSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/FastSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort/src/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort/src/ReMargeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/ReMargeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sort/src/SelectSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/SelectSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../二叉树/src/NonRecursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../二叉树/src/NonRecursion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../栈和队列/src/MyQueueWithStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../栈和队列/src/MyQueueWithStack.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Repository\RelyRepository" />
+        <option name="mavenHome" value="D:/MyDownLond/IT/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\MyDownLond\IT\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VT1FdXHam4JvAcEcn9QuOItOsr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager" selected="Application.EverythingCmdApp">
+    <configuration name="EverythingCmdApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.everything.cmd.EverythingCmdApp" />
+      <module name="Seek" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.everything.cmd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IO" />
+      <module name="MyIO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EverythingCmdApp" />
+        <item itemvalue="Application.IO" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b933bc8-9eed-4358-bf5f-7647f6c1301d" name="Default Changelist" comment="" />
+      <created>1577262168759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577262168759</updated>
+      <workItem from="1577262174972" duration="8639000" />
+      <workItem from="1577425924681" duration="1070000" />
+      <workItem from="1577499074237" duration="2258000" />
+      <workItem from="1577503573457" duration="4388000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="383" y="191" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577507839961">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state x="383" y="191" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1292.768@0.0.1292.768" timestamp="1577507839961" />
+    <state x="364" y="310" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1577504396312">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state x="364" y="310" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1292.768@0.0.1292.768" timestamp="1577504396312" />
+    <state x="426" y="126" key="FileChooserDialogImpl" timestamp="1577428770381">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state x="426" y="126" key="FileChooserDialogImpl/0.0.1292.768@0.0.1292.768" timestamp="1577428770381" />
+    <state width="1248" height="187" key="GridCell.Tab.0.bottom" timestamp="1577504910781">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state width="1248" height="187" key="GridCell.Tab.0.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577504910781" />
+    <state width="1248" height="187" key="GridCell.Tab.0.center" timestamp="1577504910780">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state width="1248" height="187" key="GridCell.Tab.0.center/0.0.1292.768@0.0.1292.768" timestamp="1577504910780" />
+    <state width="1248" height="187" key="GridCell.Tab.0.left" timestamp="1577504910779">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state width="1248" height="187" key="GridCell.Tab.0.left/0.0.1292.768@0.0.1292.768" timestamp="1577504910779" />
+    <state width="1248" height="187" key="GridCell.Tab.0.right" timestamp="1577504910781">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state width="1248" height="187" key="GridCell.Tab.0.right/0.0.1292.768@0.0.1292.768" timestamp="1577504910781" />
+    <state x="176" y="40" key="Maven.ArtifactSearchDialog" timestamp="1577264501720">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state x="176" y="40" key="Maven.ArtifactSearchDialog/0.0.1292.768@0.0.1292.768" timestamp="1577264501720" />
+    <state x="149" y="0" key="SettingsEditor" timestamp="1577264249913">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state x="149" y="0" key="SettingsEditor/0.0.1292.768@0.0.1292.768" timestamp="1577264249913" />
+    <state x="440" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577504599489">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state x="440" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1292.768@0.0.1292.768" timestamp="1577504599489" />
+    <state x="20" y="86" key="new project wizard" timestamp="1577264845384">
+      <screen x="0" y="0" width="1292" height="768" />
+    </state>
+    <state x="20" y="86" key="new project wizard/0.0.1292.768@0.0.1292.768" timestamp="1577264845384" />
+  </component>
+</project>
