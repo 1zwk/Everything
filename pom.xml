@@ -55,11 +55,11 @@
         </dependency>
 
         <!--数据库的连接池（目的：为了提高数据库的访问效率）-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba</groupId>-->
-<!--            <artifactId>druid</artifactId>-->
-<!--            <version>${druid-version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid-version}</version>
+        </dependency>
 
 
         <!--拼音-->

@@ -55,6 +55,9 @@
       <change afterPath="$PROJECT_DIR$/../题集/src/quetion_MapSet/CountBill.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../题集/src/test5.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../题集/src/tree_question/IsBalanceTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Thread/src/create_thread/RunableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Thread/src/create_thread/RunableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sort/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/BubbleSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sort/src/FastSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sort/src/FastSort.java" afterDir="false" />
@@ -192,7 +195,7 @@
       <workItem from="1577262174972" duration="8639000" />
       <workItem from="1577425924681" duration="1070000" />
       <workItem from="1577499074237" duration="2258000" />
-      <workItem from="1577503573457" duration="15372000" />
+      <workItem from="1577503573457" duration="17139000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1577519492371</created>
