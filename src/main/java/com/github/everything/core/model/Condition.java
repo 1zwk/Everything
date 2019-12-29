@@ -10,4 +10,13 @@ public class Condition {
     private String name;
 
     private String fileType;
+
+    private Integer limit;
+
+    /**
+     * 检索结果文件信息按depth排序
+     * true ->升序
+     * false -> 降序
+     */
+    private Boolean orderByAsc;
 }

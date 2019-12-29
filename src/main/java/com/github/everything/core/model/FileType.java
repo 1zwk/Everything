@@ -34,10 +34,21 @@ public enum FileType {
     /**
      * 根据文件扩展名获取文件类型
      */
-    @Test
     public static FileType lookup(String extend){
         for(FileType ft : FileType.values()){
             if(ft.extend.contains(extend)){
+                return ft;
+            }
+        }
+        return FileType.OTHER;
+    }
+
+    /**
+     * 根据文件类型名（String）获取文件类型
+     */
+    public static FileType lookupByName(String name){
+        for(FileType ft : FileType.values()){
+            if(ft.name().equals(name)){
                 return ft;
             }
         }
