@@ -26,7 +26,7 @@ public final class FileConvertThing {
     //计算文件深度
     private static int computeFileDepth(File file){
         int depth = 0;
-        String[] segments = file.getAbsolutePath().split(File.separator);
+        String[] segments = file.getAbsolutePath().split("\\\\");//没懂为什么是四个\\
         depth = segments.length;
         return depth;
     }
