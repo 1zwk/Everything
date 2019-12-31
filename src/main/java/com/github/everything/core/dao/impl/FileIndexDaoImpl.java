@@ -57,10 +57,14 @@ public class FileIndexDaoImpl implements FileIndexDao {
                                     .append(" ' ");//因为我们设置的是大写，所以把输入转为大写。
                 }
                 //order ，根据condition的true或者false判断
-                sqlBuilder.append(" order by depth ")
-                        .append(condition.getOrderByAsc() ? "asc":"desc");
+                if(condition.getOrderByAsc() != null) {
+                    sqlBuilder.append(" order by depth ")
+                            .append(condition.getOrderByAsc() ? "asc" : "desc");
+                }
                 //分页查询limit n offset m ,从m开始查询，筛选n条结果。
-                sqlBuilder.append(" limit ").append(condition.getLimit()).append(" offset 0 ");
+                if(condition.getLimit() != null){
+                    sqlBuilder.append(" limit ").append(condition.getLimit()).append(" offset 0 ");
+                }
 
 
                 System.out.println(sqlBuilder.toString());
@@ -151,10 +155,9 @@ public class FileIndexDaoImpl implements FileIndexDao {
     }
 
     /**
-     * 自己写的，删除，只在FileIndexDaoImpl可用
-     * @param name
+     * @param thing
      */
-    public void delete(String name) {
+    public void delete(Thing thing) {
         Connection connection = null;
         PreparedStatement statement = null;
 
@@ -163,13 +166,17 @@ public class FileIndexDaoImpl implements FileIndexDao {
                 //1.获取数据库连接
                 connection = dataSource.getConnection();
                 //2.准备SQL语句
-                String sql = "delete from file_index where name = ?";
+                /**
+                 * 优化：根据path删除文件，并且如果是目录的话，
+                 * 我们在判断这个目录的最终指向文件为空，就把以这个path为前缀的文件都删除
+                 *
+                 * 问题：没懂这个以path为前缀的文件都删除
+                 */
+                String sql = "delete from file_index where path like '\" + thing.getPath() + \"%'";
                 //3.准备命令
                 statement = connection.prepareStatement(sql);
                 //4.设置参数1 2 3 4
-                statement.setString(1,name);
-
-
+//                statement.setString(1,thing.getPath());
                 //5.执行命令
                 statement.executeUpdate();
             } finally {

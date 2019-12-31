@@ -1,6 +1,7 @@
 package com.github.everything.core.dao;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.github.everything.config.EverythingPlusConfig;
 
 import javax.sql.DataSource;
 import java.io.*;
@@ -18,16 +19,13 @@ public class DataSourceFactory {
      */
     private static volatile DruidDataSource dataSource;
 
-
-    private DataSourceFactory(){
-
-    }
+    private DataSourceFactory() {}
 
     //建立数据源
-    public static DataSource dataSource(){
-        if(dataSource == null){
-            synchronized (DataSourceFactory.class){
-                if(dataSource == null){
+    public static DataSource dataSource() {
+        if (dataSource == null) {
+            synchronized (DataSourceFactory.class) {
+                if (dataSource == null) {
                     //实例化
                     dataSource = new DruidDataSource();
                     //JDBC 的第一步 连接数据库
@@ -35,14 +33,12 @@ public class DataSourceFactory {
 
                     /*url，URLname，password*/
                     //采用H2的嵌入式数据库，数据库以本地文件的方式存储，只需要提供URL接口
-                    String workDir = System.getProperty("user.dir");//获取当前工程路径。“user。home”获取文件路径
                     //JDBC规范中的关于Mysql  jdbc:mysql://ip:port/databaseName
 
                     //JDBC规范中关于H2  jdbc:h2:filepath  ->存储到本地文件
                     //JDBC规范中关于H2  jdbc:h2:~/filepath  ->存储到当前用户的home目录。
                     //JDBC规范中的关于H2  jdbc:h2://ip:port/databaseName  ->存储到服务器。
-                    dataSource.setUrl("jdbc:h2:" + workDir + File.separator+ "everything_plus");
-
+                    dataSource.setUrl("jdbc:h2:" + EverythingPlusConfig.getInstance().getH2IndexPath());
                 }
             }
         }
@@ -51,7 +47,7 @@ public class DataSourceFactory {
 
 
     //初始化数据库
-    public static void initDatabase(){
+    public static void initDatabase() {
         //1.获取数据源
         DataSource dataSource = DataSourceFactory.dataSource();
         //2.获取SQL语句
@@ -61,18 +57,18 @@ public class DataSourceFactory {
         //采用classpath路径下的文件
 
         //jdk 的优化 ：try（sql命令） 的方式创建命令就不用最后关闭，会自动关闭
-        try( InputStream in = DataSourceFactory.class.getClassLoader().
-                getResourceAsStream("everything_plus.sql")){
+        try (InputStream in = DataSourceFactory.class.getClassLoader().
+                getResourceAsStream("everything_plus.sql")) {
 
-            if(in == null){
+            if (in == null) {
                 throw new RuntimeException("无法初始化数据库，请检查");
             }
             StringBuilder sqlBuilder = new StringBuilder();
-            try(BufferedReader reader = new BufferedReader(new InputStreamReader(in))){
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(in))) {
                 String len = null;
-                while ((len = reader.readLine()) != null){
+                while ((len = reader.readLine()) != null) {
                     //不读取注释部分
-                    if(!len.startsWith("--")){//String.startsWith(String x) 判断是否已字符串“x”为开头
+                    if (!len.startsWith("--")) {//String.startsWith(String x) 判断是否已字符串“x”为开头
                         sqlBuilder.append(len);
                     }
                 }
@@ -89,9 +85,7 @@ public class DataSourceFactory {
             //3.4关闭连接
             connection.close();
             statement.close();
-        }catch(IOException e){
-
-        } catch (SQLException e) {
+        } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
 

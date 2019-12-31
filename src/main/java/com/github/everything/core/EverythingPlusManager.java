@@ -6,13 +6,17 @@ import com.github.everything.core.dao.FileIndexDao;
 import com.github.everything.core.dao.impl.FileIndexDaoImpl;
 import com.github.everything.core.index.FileScan;
 import com.github.everything.core.index.impl.FileScanImpl;
+import com.github.everything.core.interceptor.ThingInterceptor;
 import com.github.everything.core.interceptor.impl.FileIndexInterceptor;
+import com.github.everything.core.interceptor.impl.FilePrintInterceptor;
+import com.github.everything.core.interceptor.impl.ThingClearInterceptor;
 import com.github.everything.core.model.Condition;
 import com.github.everything.core.model.Thing;
 import com.github.everything.core.search.FileSearch;
 import com.github.everything.core.search.impl.FileSearchImpl;
 
 import javax.sql.DataSource;
+import java.io.File;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;
@@ -21,8 +25,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class EverythingPlusManager {
+
+
 
     private FileSearch fileSearch;
 
@@ -64,7 +72,8 @@ public class EverythingPlusManager {
         //数据源对象
         DataSource dataSource = DataSourceFactory.dataSource();
 
-        initOrResetDatabase();
+        //检查数据库
+        checkDatabase();
 
         //业务层的对象
         FileIndexDao fileIndexDao = new FileIndexDaoImpl(dataSource);
@@ -72,33 +81,52 @@ public class EverythingPlusManager {
         this.fileSearch = new FileSearchImpl(fileIndexDao);
 
         this.fileScan = new FileScanImpl();
-        //发布代码的时候是不需要的
-//        this.fileScan.interceptor(new FilePrintInterceptor());
+
+        //发布代码的时候是不需要的，仅为了调试
+        this.fileScan.interceptor(new FilePrintInterceptor());
         this.fileScan.interceptor(new FileIndexInterceptor(fileIndexDao));
 
         this.thingClearInterceptor = new ThingClearInterceptor(fileIndexDao);
+
         this.backgroundClearThread = new Thread(this.thingClearInterceptor);
         this.backgroundClearThread.setName("Thread-Thing-Clear");
-        this.backgroundClearThread.setDaemon(true);
+        this.backgroundClearThread.setDaemon(true);//守护线程   问题:什么是守护线程
 
         //文件监控对象
-        this.fileWatch = new FileWatchImpl(fileIndexDao);
+// TODO       this.fileWatch = new FileWatchImpl(fileIndexDao);
 
     }
 
-    /**
-     * 调用数据库初始化
-     */
-    public void initOrResetDatabase(){
-        DataSourceFactory.initDatabase();
+    //检查数据库
+    private void checkDatabase() {
+        String fileName = EverythingPlusConfig.getInstance().getH2IndexPath()+ ".mv.db";
+        File dbFile = new File(fileName);
+        //如果是文件或者这个目录不存在就初始化
+        if(dbFile.isFile()&&!dbFile.exists()){
+            //初始化数据库（一般先检查是否存在数据库，因为如果存在，初始化后数据会消失）
+            DataSourceFactory.initDatabase();
+        }
     }
+
 
     /**
      * 检索
      */
     public List<Thing> search(Condition condition){
         //NOTICE 扩展
-        return this.fileSearch.search(condition);
+        //Stream 流式处理
+        return this.fileSearch.search(condition)
+                .stream().filter(thing -> {
+                    String path = thing.getPath();
+                    File f = new File(path);
+                    //如果存在这个文件就返回，如果不存在就删除并且不返回
+                    boolean flag = f.exists();
+                    if(!flag){
+                        //删除
+                        thingClearInterceptor.apply(thing);
+                    }
+                    return flag;
+                }).collect(Collectors.toList());
     }
 
     /**
@@ -106,19 +134,17 @@ public class EverythingPlusManager {
      */
     public void buildIndex(){
         Set<String> directories = EverythingPlusConfig.getInstance().getIncludePath();
-
         /**
          * 依据目录的大小来创建合适大小的线程池，并且命名
          */
         if(this.executorService == null){
             this.executorService = Executors.newFixedThreadPool(directories.size()
                     , new ThreadFactory() {
-
                         //一个可能原子性更新的int值，默认为0，也可以以给定参数值开始
                         private final AtomicInteger threadId = new AtomicInteger();
                         @Override
                         public Thread newThread(Runnable r) {
-                            Thread thread = new Thread();
+                            Thread thread = new Thread(r);
                             thread.setName("Thread-Scan-" + threadId.getAndIncrement());
                             return thread;
                         }
@@ -131,13 +157,10 @@ public class EverythingPlusManager {
         System.out.println("Build index start");
         //多线程的把文件建立索引
         for(String path : directories){
-            this.executorService.submit(new Runnable() {
-                @Override
-                public void run() {
-                    EverythingPlusManager.this.fileScan.index(path);
-                    //当前任务完成，值-1
-                    countDownLatch.countDown();
-                }
+            this.executorService.submit(() -> {
+                EverythingPlusManager.this.fileScan.index(path);
+                //当前任务完成，值-1
+                countDownLatch.countDown();
             });
         }
 
@@ -154,6 +177,8 @@ public class EverythingPlusManager {
      * 启动清理线程
      */
     public void startBackgroundClearThread() {
+        //AtomicBoolean.compareAndSet(expect, update)意思是如果当前值=expect值，就把当前值改为update。
+        //放在这里意味着如果线程是关闭状态，就把线程状态原子性的改为启动，
         if (this.backgroundClearThreadStatus.compareAndSet(false, true)) {
             this.backgroundClearThread.start();
         } else {

@@ -22,7 +22,7 @@ public class EverythingCmdApp {
         manager.startBackgroundClearThread();
 
         //启动监控
-        manager.startFileSystemMonitor();
+//TODO        manager.startFileSystemMonitor();
 
         //交互式
         interactive(manager);
@@ -73,9 +73,10 @@ public class EverythingCmdApp {
     }
 
     private static void search(EverythingPlusManager manager, Condition condition) {
+        //统一调度器中的search
         //name fileType limit orderByAsc
-        condition.setLimit(EverythingPlusConfig.getInstance().getMaxReturn());
-        condition.setOrderByAsc(EverythingPlusConfig.getInstance().getDeptOrderAsc());
+// TODO       condition.setLimit(EverythingPlusConfig.getInstance().getMaxReturn());
+//        condition.setOrderByAsc(EverythingPlusConfig.getInstance().getDeptOrderAsc());
         List<Thing> thingList = manager.search(condition);
         for (Thing thing : thingList) {
             System.out.println(thing.getPath());
@@ -85,7 +86,14 @@ public class EverythingCmdApp {
 
     private static void index(EverythingPlusManager manager) {
         //统一调度器中的index
-        new Thread(manager::buildIndex).start();
+        new Thread(manager::buildIndex).start();//lambda表达式
+//        lambda的内容：
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                manager.buildIndex();
+//            }
+//        }).start();
     }
 
     private static void quit() {

@@ -5,15 +5,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zwk</groupId>
-    <artifactId>Seek</artifactId>
+    <artifactId>Everything-plus</artifactId>
     <version>1.0.0</version>
 
     <!--打包格式-->
     <packaging>jar</packaging>
     <!--项目名称-->
-    <name>Seek</name>
+    <name>Everything-plu</name>
     <!--项目描述-->
-    <description>一个简约的everything的java版工具</description>
+    <description>
+        一个everything的java版工具
+        功能：可以通过命令行来搜索本机的文件目录
+            1.支持模糊搜索
+            2.
+
+    </description>
     <!--开发者信息-->
     <developers>
         <developer>
@@ -35,10 +41,16 @@
     </properties>
 
 
-    <!--依赖-->
+    <!--项目依赖-->
     <!--方法：可以直接alt+insert 打开Dependency 来搜索添加-->
     <dependencies>
 
+        <!--mysql数据库-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.48</version>
+        </dependency>
         <!-- lombok插件运行依赖的库 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -47,7 +59,12 @@
             <scope>provided</scope>
         </dependency>
 
-        <!--H2数据库以及驱动（jdbc api）-->
+        <!--H2数据库以及驱动（jdbc api）
+        H2的优势：1.快速，开源，jdbc规范的，纯java的，免费
+                 2.jar包很小，利于下载
+                 3.嵌入式和服务器模式，内存数据库
+                 4.基于浏览器的控制台应用
+        -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -62,12 +79,14 @@
         </dependency>
 
 
-        <!--拼音-->
+
+        <!--拼音
         <dependency>
             <groupId>com.belerweb</groupId>
             <artifactId>pinyin4j</artifactId>
             <version>2.5.1</version>
         </dependency>
+        -->
 
         <!--JDBC
         <dependency>
@@ -78,6 +97,54 @@
         -->
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <!--编译插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+            </plugin>
+            <!--依赖管理插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.1</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/lib
+                            </outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--打包插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <!--配置主类-->
+                            <mainClass>com.github.everything.cmd.EverythingCmdApp</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib</classpathPrefix>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 
 
 </project>

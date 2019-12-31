@@ -22,5 +22,9 @@ public interface FileIndexDao {
      */
     void insert(Thing thing);
 
+    /**
+     * 删除Thing
+     */
+    void delete(Thing thing);
 
 }

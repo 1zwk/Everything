@@ -25,10 +25,8 @@ public final class FileConvertThing {
 
     //计算文件深度
     private static int computeFileDepth(File file){
-        int depth = 0;
         String[] segments = file.getAbsolutePath().split("\\\\");//没懂为什么是四个\\
-        depth = segments.length;
-        return depth;
+        return  segments.length;
     }
 
     //计算文件类型
@@ -38,7 +36,7 @@ public final class FileConvertThing {
         }
         String fileName = file.getName();
         int index = fileName.lastIndexOf(".");
-        //例如：name.
+        //保证文件有后缀并且合乎规范，例如：name.
         if(index != -1 && index < fileName.length()-1){//保证存在index并且不在最后一位（防止下标越界）。
             String extend = fileName.substring(index+1);
             return FileType.lookup(extend);
