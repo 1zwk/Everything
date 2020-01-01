@@ -12,6 +12,9 @@ public class EverythingCmdApp {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        //解析参数
+        parseParams(args);
+
         //欢迎
         welcome();
 
@@ -27,6 +30,29 @@ public class EverythingCmdApp {
         //交互式
         interactive(manager);
 
+    }
+
+    private static void parseParams(String[] args) {
+        /**
+         * 处理时如果用户输入参数不对，直接使用默认值
+         */
+        for(String param : args){
+            if(param.startsWith("--maxReturnNum=")){
+                int index = param.indexOf("=");
+                if(index < "--maxReturnNum".length() -1){
+
+                }
+            }
+            if(param.startsWith("--depthOrderByAsc=")){
+
+            }
+            if(param.startsWith("--includePath=")){
+
+            }
+            if(param.startsWith("--excludePath=")){
+
+            }
+        }
     }
 
     private static void interactive(EverythingPlusManager manager) {
@@ -75,8 +101,10 @@ public class EverythingCmdApp {
     private static void search(EverythingPlusManager manager, Condition condition) {
         //统一调度器中的search
         //name fileType limit orderByAsc
-// TODO       condition.setLimit(EverythingPlusConfig.getInstance().getMaxReturn());
-//        condition.setOrderByAsc(EverythingPlusConfig.getInstance().getDeptOrderAsc());
+
+        //get搜索的默认大小和顺序
+        condition.setLimit(EverythingPlusConfig.getInstance().getMaxReturnNum());
+        condition.setOrderByAsc(EverythingPlusConfig.getInstance().getDepthOrderAsc());
         List<Thing> thingList = manager.search(condition);
         for (Thing thing : thingList) {
             System.out.println(thing.getPath());

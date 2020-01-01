@@ -65,9 +65,6 @@ public class FileIndexDaoImpl implements FileIndexDao {
                 if(condition.getLimit() != null){
                     sqlBuilder.append(" limit ").append(condition.getLimit()).append(" offset 0 ");
                 }
-
-
-                System.out.println(sqlBuilder.toString());
                 //3.准备命令
                 statement = connection.prepareStatement(sqlBuilder.toString());
                 //4.设置参数1 2 3 4

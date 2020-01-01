@@ -5,9 +5,6 @@
       <change afterPath="$PROJECT_DIR$/../Collection-Map/Collection-Map.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Comparator/Comparator.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Comparator/src/CreateComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/FileTest.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/src/CopyTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/src/MyFile.java" afterDir="false" />
@@ -83,17 +80,9 @@
       <change afterPath="$PROJECT_DIR$/../题集/src/tree_question/IsBalanceTree.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../题集/题集.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/config/EverythingPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/config/EverythingPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/EverythingPlusManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/EverythingPlusManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/common/FileConvertThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/common/FileConvertThing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/FileIndexDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/FileIndexDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/impl/FileIndexDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/impl/FileIndexDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/interceptor/ThingIntercepteor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/interceptor/ThingInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/interceptor/impl/FileIndexInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/interceptor/impl/FileIndexInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/search/impl/FileSearchImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/search/impl/FileSearchImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/everything/cmd/EverythingCmdApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/everything/cmd/EverythingCmdApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Map/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Map/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Person.java" beforeDir="false" />
@@ -130,6 +119,9 @@
       <node key="9e87f50c-cfca-4522-979e-d3dc22bf7160" />
     </checked>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Everything-Plus" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -140,7 +132,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -254,7 +246,7 @@
       <workItem from="1577425924681" duration="1070000" />
       <workItem from="1577499074237" duration="2258000" />
       <workItem from="1577503573457" duration="29226000" />
-      <workItem from="1577538003629" duration="62973000" />
+      <workItem from="1577538003629" duration="66924000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1577519492371</created>
@@ -277,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577686666670</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="3">
+      <created>1577774038971</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577774038971</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +285,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2" />
     <MESSAGE value="review" />
-    <option name="LAST_COMMIT_MESSAGE" value="review" />
+    <MESSAGE value="3" />
+    <option name="LAST_COMMIT_MESSAGE" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="150" y="82" key="#HTTP_Proxy" timestamp="1577524120889">
@@ -317,10 +317,10 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="381" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1292.768@0.0.1292.768" timestamp="1577615182936" />
-    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577686650601">
+    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577874441943">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577686650601" />
+    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577874441943" />
     <state x="427" y="76" key="ExecutionTargetDialog" timestamp="1577524834705">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -329,22 +329,22 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="426" y="126" key="FileChooserDialogImpl/0.0.1292.768@0.0.1292.768" timestamp="1577759003033" />
-    <state width="1248" height="170" key="GridCell.Tab.0.bottom" timestamp="1577766197510">
+    <state width="1248" height="84" key="GridCell.Tab.0.bottom" timestamp="1577777323624">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="170" key="GridCell.Tab.0.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577766197510" />
-    <state width="1248" height="170" key="GridCell.Tab.0.center" timestamp="1577766197509">
+    <state width="1248" height="84" key="GridCell.Tab.0.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577777323624" />
+    <state width="1248" height="84" key="GridCell.Tab.0.center" timestamp="1577777323621">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="170" key="GridCell.Tab.0.center/0.0.1292.768@0.0.1292.768" timestamp="1577766197509" />
-    <state width="1248" height="170" key="GridCell.Tab.0.left" timestamp="1577766197509">
+    <state width="1248" height="84" key="GridCell.Tab.0.center/0.0.1292.768@0.0.1292.768" timestamp="1577777323621" />
+    <state width="1248" height="84" key="GridCell.Tab.0.left" timestamp="1577777323618">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="170" key="GridCell.Tab.0.left/0.0.1292.768@0.0.1292.768" timestamp="1577766197509" />
-    <state width="1248" height="170" key="GridCell.Tab.0.right" timestamp="1577766197510">
+    <state width="1248" height="84" key="GridCell.Tab.0.left/0.0.1292.768@0.0.1292.768" timestamp="1577777323618" />
+    <state width="1248" height="84" key="GridCell.Tab.0.right" timestamp="1577777323623">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="170" key="GridCell.Tab.0.right/0.0.1292.768@0.0.1292.768" timestamp="1577766197510" />
+    <state width="1248" height="84" key="GridCell.Tab.0.right/0.0.1292.768@0.0.1292.768" timestamp="1577777323623" />
     <state width="1248" height="111" key="GridCell.Tab.1.bottom" timestamp="1577541475392">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -373,10 +373,10 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="118" y="0" width="994" height="768" key="SettingsEditor/0.0.1292.768@0.0.1292.768" timestamp="1577765836274" />
-    <state x="238" y="118" key="Vcs.Push.Dialog.v2" timestamp="1577611564677">
+    <state x="238" y="118" key="Vcs.Push.Dialog.v2" timestamp="1577774544812">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="238" y="118" key="Vcs.Push.Dialog.v2/0.0.1292.768@0.0.1292.768" timestamp="1577611564677" />
+    <state x="238" y="118" key="Vcs.Push.Dialog.v2/0.0.1292.768@0.0.1292.768" timestamp="1577774544812" />
     <state x="440" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577504599489">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -393,9 +393,9 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="388" y="5" key="refactoring.ChangeSignatureDialog/0.0.1292.768@0.0.1292.768" timestamp="1577601492850" />
-    <state x="309" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1577623780275">
+    <state x="309" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1577778149677">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="309" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1292.768@0.0.1292.768" timestamp="1577623780275" />
+    <state x="309" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1292.768@0.0.1292.768" timestamp="1577778149677" />
   </component>
 </project>

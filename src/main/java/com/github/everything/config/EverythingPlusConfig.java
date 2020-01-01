@@ -2,7 +2,9 @@ package com.github.everything.config;
 
 import com.alibaba.druid.support.json.JSONUtils;
 import com.github.everything.core.search.FileSearch;
+import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.io.File;
 import java.nio.file.FileSystem;
@@ -15,7 +17,7 @@ import java.util.function.Consumer;
 /**
  * 配置类:对一些特定的文件或者目录进行排除，换句话说，搜索想要的，不搜索不想要的。
  */
-@Getter//使得这里的数据只可以获取不可以修改
+@Data//使得这里的数据只可以获取不可以修改
 public class EverythingPlusConfig {
 
     private static volatile EverythingPlusConfig config;
@@ -33,6 +35,15 @@ public class EverythingPlusConfig {
     private Set<String> excludePath = new HashSet<>();
 
     //TODO 可配置的参数会在这里体现
+    /**
+     * 检索返回的最大结果数
+     */
+    private Integer maxReturnNum = 30;
+
+    /**
+     * 深度排序的规则,默认是升序
+     */
+    private Boolean depthOrderAsc = true;
 
     /**
      * h2数据库文件路径
