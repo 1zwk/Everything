@@ -72,8 +72,8 @@ public class EverythingPlusManager {
         //数据源对象
         DataSource dataSource = DataSourceFactory.dataSource();
 
-        //检查数据库
-        checkDatabase();
+        //初始化数据库
+        initOrResetDatabase();
 
         //业务层的对象
         FileIndexDao fileIndexDao = new FileIndexDaoImpl(dataSource);
@@ -98,14 +98,17 @@ public class EverythingPlusManager {
     }
 
     //检查数据库
-    private void checkDatabase() {
-        String fileName = EverythingPlusConfig.getInstance().getH2IndexPath()+ ".mv.db";
-        File dbFile = new File(fileName);
-        //如果是文件或者这个目录不存在就初始化
-        if(dbFile.isFile()&&!dbFile.exists()){
-            //初始化数据库（一般先检查是否存在数据库，因为如果存在，初始化后数据会消失）
-            DataSourceFactory.initDatabase();
-        }
+//    private void checkDatabase() {
+//        String fileName = EverythingPlusConfig.getInstance().getH2IndexPath()+ ".mv.db";
+//        File dbFile = new File(fileName);
+//        //如果是文件或者这个目录不存在就初始化
+//        if(dbFile.isFile()&&!dbFile.exists()){
+//            //初始化数据库（一般先检查是否存在数据库，因为如果存在，初始化后数据会消失）
+//            DataSourceFactory.initDatabase();
+//        }
+//    }
+    private void initOrResetDatabase(){
+        DataSourceFactory.initDatabase();
     }
 
 
@@ -133,6 +136,7 @@ public class EverythingPlusManager {
      * 索引
      */
     public void buildIndex(){
+        initOrResetDatabase();
         Set<String> directories = EverythingPlusConfig.getInstance().getIncludePath();
         /**
          * 依据目录的大小来创建合适大小的线程池，并且命名

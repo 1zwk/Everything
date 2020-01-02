@@ -1,6 +1,5 @@
 package com.github.everything.core.model;
 
-import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.HashSet;

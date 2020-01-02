@@ -5,6 +5,7 @@ import com.github.everything.core.search.FileSearch;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.io.File;
 import java.nio.file.FileSystem;
@@ -17,7 +18,8 @@ import java.util.function.Consumer;
 /**
  * 配置类:对一些特定的文件或者目录进行排除，换句话说，搜索想要的，不搜索不想要的。
  */
-@Data//使得这里的数据只可以获取不可以修改
+@Getter//使得这里的数据只可以获取不可以修改
+@ToString
 public class EverythingPlusConfig {
 
     private static volatile EverythingPlusConfig config;
@@ -38,17 +40,19 @@ public class EverythingPlusConfig {
     /**
      * 检索返回的最大结果数
      */
+    @Setter
     private Integer maxReturnNum = 30;
 
     /**
      * 深度排序的规则,默认是升序
      */
+    @Setter
     private Boolean depthOrderAsc = true;
 
     /**
      * h2数据库文件路径
      */
-    //获取当前工程路径。“user。home”获取文件路径
+    //获取当前工程路径。“user.home”获取文件路径
     private String h2IndexPath = System.getProperty("user.dir") + File.separator
             + "everything_plus";
 

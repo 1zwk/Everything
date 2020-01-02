@@ -11,9 +11,13 @@ import java.util.Scanner;
 public class EverythingCmdApp {
     private static Scanner scanner = new Scanner(System.in);
 
+
     public static void main(String[] args) {
+
         //解析参数
         parseParams(args);
+
+        System.out.println(EverythingPlusConfig.getInstance());
 
         //欢迎
         welcome();
@@ -32,25 +36,61 @@ public class EverythingCmdApp {
 
     }
 
+    //解析用户输入
     private static void parseParams(String[] args) {
+        EverythingPlusConfig config = EverythingPlusConfig.getInstance();
         /**
          * 处理时如果用户输入参数不对，直接使用默认值
          */
-        for(String param : args){
-            if(param.startsWith("--maxReturnNum=")){
+        for (String param : args) {
+            String maxReturnParam = "--maxReturnNum=";
+            if (param.startsWith(maxReturnParam)) {
+                //--maxReturnNum=value
                 int index = param.indexOf("=");
-                if(index < "--maxReturnNum".length() -1){
-
+                String maxReturnStr = param.substring(index + 1);
+                try {
+                    int maxReturn = Integer.parseInt(maxReturnStr);
+                    config.setMaxReturnNum(maxReturn);
+                } catch (NumberFormatException e) {
+                    //不符合就处理，直接按默认值。
                 }
             }
-            if(param.startsWith("--depthOrderByAsc=")){
+            String depthOrederByAscParam = "--depthOrderByAsc";
+            if (param.startsWith(depthOrederByAscParam)) {
+                //--depthOrderByAsc=value
+                int index = param.indexOf("=");
+                String depthOrderByAsc = param.substring(index + 1);
 
+                //boolean.parseBoolean（）,如果参数不为空且为“true”的话返回true，否则false。
+                config.setDepthOrderAsc(Boolean.parseBoolean(depthOrederByAscParam));
             }
-            if(param.startsWith("--includePath=")){
-
+            String includePathParam = "--includePath=";
+            if (param.startsWith(includePathParam)) {
+                //--includePath=values ;
+                int index = param.indexOf("=");
+                String includePathStr = param.substring(index + 1);
+                String[] includePATHStrs = includePathStr.split(";");
+                //只有在用户输入不为空才重置需要被扫描的set集合。
+                if(includePathStr.length()>0){
+                    config.getIncludePath().clear();
+                }
+                for(String p : includePATHStrs){
+                    config.getIncludePath().add(p);
+                }
             }
-            if(param.startsWith("--excludePath=")){
-
+            String excludePathParam = "--excludePath=";
+            if (param.startsWith("--excludePath=")) {
+                //--excludePath=values ;
+                int index = param.indexOf("=");
+                String excludePathStr = param.substring(index + 1);
+                String[] excludePATHStrs = excludePathStr.split(";");
+                //只有在用户输入不为空才重置需要要排除的set集合。
+                if(excludePathStr.length()>0){
+                    config.getExcludePath().clear();
+                }
+                for(String p : excludePATHStrs){
+                    config.getExcludePath().add(p);
+                }
             }
         }
     }

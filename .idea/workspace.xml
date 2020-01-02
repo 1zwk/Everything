@@ -82,7 +82,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/config/EverythingPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/config/EverythingPlusConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/impl/FileIndexDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/impl/FileIndexDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/EverythingPlusManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/EverythingPlusManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/model/FileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/model/FileType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/everything/cmd/EverythingCmdApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/everything/cmd/EverythingCmdApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Map/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Map/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Person.java" beforeDir="false" />
@@ -132,7 +134,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -171,6 +173,7 @@
     <configuration name="EverythingCmdApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.everything.cmd.EverythingCmdApp" />
       <module name="Seek" />
+      <option name="PROGRAM_PARAMETERS" value="--maxReturnNum=10 --depthOrderByAsc=false --incluedePath= --excluedePath=" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.github.everything.cmd.*" />
@@ -246,7 +249,7 @@
       <workItem from="1577425924681" duration="1070000" />
       <workItem from="1577499074237" duration="2258000" />
       <workItem from="1577503573457" duration="29226000" />
-      <workItem from="1577538003629" duration="66924000" />
+      <workItem from="1577538003629" duration="80633000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1577519492371</created>
@@ -276,17 +279,24 @@
       <option name="project" value="LOCAL" />
       <updated>1577774038971</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2">
+      <created>1577874534287</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577874534287</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2" />
     <MESSAGE value="review" />
     <MESSAGE value="3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="150" y="82" key="#HTTP_Proxy" timestamp="1577524120889">
@@ -297,18 +307,18 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="238" y="44" key="#Notifications/0.0.1292.768@0.0.1292.768" timestamp="1577611587462" />
-    <state x="100" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577699357060">
+    <state x="19" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577945296089">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="100" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1292.768@0.0.1292.768" timestamp="1577699357060" />
+    <state x="19" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1292.768@0.0.1292.768" timestamp="1577945296089" />
     <state x="383" y="191" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577534956810">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="383" y="191" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1292.768@0.0.1292.768" timestamp="1577534956810" />
-    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser" timestamp="1577685027246">
+    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser" timestamp="1577941004253">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser/0.0.1292.768@0.0.1292.768" timestamp="1577685027246" />
+    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser/0.0.1292.768@0.0.1292.768" timestamp="1577941004253" />
     <state x="364" y="310" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1577513409546">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -317,10 +327,10 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="381" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1292.768@0.0.1292.768" timestamp="1577615182936" />
-    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577874441943">
+    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577874529426">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577874441943" />
+    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577874529426" />
     <state x="427" y="76" key="ExecutionTargetDialog" timestamp="1577524834705">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -329,22 +339,22 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="426" y="126" key="FileChooserDialogImpl/0.0.1292.768@0.0.1292.768" timestamp="1577759003033" />
-    <state width="1248" height="84" key="GridCell.Tab.0.bottom" timestamp="1577777323624">
+    <state width="1248" height="212" key="GridCell.Tab.0.bottom" timestamp="1577949943910">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="84" key="GridCell.Tab.0.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577777323624" />
-    <state width="1248" height="84" key="GridCell.Tab.0.center" timestamp="1577777323621">
+    <state width="1248" height="212" key="GridCell.Tab.0.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
+    <state width="1248" height="212" key="GridCell.Tab.0.center" timestamp="1577949943910">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="84" key="GridCell.Tab.0.center/0.0.1292.768@0.0.1292.768" timestamp="1577777323621" />
-    <state width="1248" height="84" key="GridCell.Tab.0.left" timestamp="1577777323618">
+    <state width="1248" height="212" key="GridCell.Tab.0.center/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
+    <state width="1248" height="212" key="GridCell.Tab.0.left" timestamp="1577949943910">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="84" key="GridCell.Tab.0.left/0.0.1292.768@0.0.1292.768" timestamp="1577777323618" />
-    <state width="1248" height="84" key="GridCell.Tab.0.right" timestamp="1577777323623">
+    <state width="1248" height="212" key="GridCell.Tab.0.left/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
+    <state width="1248" height="212" key="GridCell.Tab.0.right" timestamp="1577949943910">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="84" key="GridCell.Tab.0.right/0.0.1292.768@0.0.1292.768" timestamp="1577777323623" />
+    <state width="1248" height="212" key="GridCell.Tab.0.right/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
     <state width="1248" height="111" key="GridCell.Tab.1.bottom" timestamp="1577541475392">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
