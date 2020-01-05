@@ -2,13 +2,18 @@ package com.github.everything.core.dao;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.github.everything.config.EverythingPlusConfig;
+import org.apache.commons.io.IOUtils;
+import sun.nio.ch.IOUtil;
 
 import javax.sql.DataSource;
+import javax.xml.crypto.Data;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.SQLOutput;
+import java.util.function.Predicate;
+import java.util.zip.DataFormatException;
 
 /**
  * 创建数据源 的 单例工厂类
@@ -101,6 +106,20 @@ public class DataSourceFactory {
 
     //测试
     public static void main(String[] args) {
-        DataSourceFactory.initDatabase();
+        //演示IO包的使用
+        try(InputStream in  = DataSourceFactory.class.getClassLoader()
+                .getResourceAsStream("everything_plus.sql")){
+//            String sql = IOUtils.toString(in);
+//            System.out.println(sql);
+            IOUtils.readLines(in).stream().filter(new Predicate<String>() {
+                @Override
+                public boolean test(String line) {
+                    return !line.startsWith("--");
+                }
+            }).forEach(line -> System.out.println(line));
+        }catch(IOException e){
+
+        }
+
     }
 }

@@ -5,6 +5,10 @@
       <change afterPath="$PROJECT_DIR$/../Collection-Map/Collection-Map.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Comparator/Comparator.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Comparator/src/CreateComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/common/HandlePath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/monitor/FileWatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/monitor/impl/FileWatchImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/FileTest.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/src/CopyTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FileTest/src/MyFile.java" afterDir="false" />
@@ -38,6 +42,7 @@
       <change afterPath="$PROJECT_DIR$/../Thread/src/safe_question/FileOperator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Thread/src/safe_question/SafeThread.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Thread/src/safe_question/SynchronizedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../everything_2/everything_2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../jar包/jar包.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../maven.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../maventest/moventest/movenTest.iml" afterDir="false" />
@@ -80,11 +85,11 @@
       <change afterPath="$PROJECT_DIR$/../题集/src/tree_question/IsBalanceTree.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../题集/题集.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/cmd/EverythingCmdApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/config/EverythingPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/config/EverythingPlusConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/EverythingPlusManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/EverythingPlusManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/dao/DataSourceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/everything/core/model/FileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/everything/core/model/FileType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/everything/cmd/EverythingCmdApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/everything/cmd/EverythingCmdApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Map/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Map/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Person.java" beforeDir="false" />
@@ -136,6 +141,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\JAVA\Everything-Plus\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -163,13 +175,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Map" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunManager" selected="Application.EverythingCmdApp">
+    <configuration name="DataSourceFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.everything.core.dao.DataSourceFactory" />
+      <module name="Seek" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.everything.core.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EverythingCmdApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.everything.cmd.EverythingCmdApp" />
       <module name="Seek" />
@@ -214,10 +239,12 @@
       <item itemvalue="Application.EverythingPlusConfig" />
       <item itemvalue="Application.EverythingCmdApp" />
       <item itemvalue="Application.FileScan" />
+      <item itemvalue="Application.DataSourceFactory" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.EverythingCmdApp" />
+        <item itemvalue="Application.DataSourceFactory" />
         <item itemvalue="Application.FileScan" />
         <item itemvalue="Application.EverythingPlusConfig" />
       </list>
@@ -249,7 +276,8 @@
       <workItem from="1577425924681" duration="1070000" />
       <workItem from="1577499074237" duration="2258000" />
       <workItem from="1577503573457" duration="29226000" />
-      <workItem from="1577538003629" duration="80633000" />
+      <workItem from="1577538003629" duration="97992000" />
+      <workItem from="1578187258008" duration="4361000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1577519492371</created>
@@ -286,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577874534287</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="剩下监控">
+      <created>1577951273541</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577951273541</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +331,8 @@
     <MESSAGE value="review" />
     <MESSAGE value="3" />
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="剩下监控" />
+    <option name="LAST_COMMIT_MESSAGE" value="剩下监控" />
   </component>
   <component name="WindowStateProjectService">
     <state x="150" y="82" key="#HTTP_Proxy" timestamp="1577524120889">
@@ -315,10 +351,10 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="383" y="191" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1292.768@0.0.1292.768" timestamp="1577534956810" />
-    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser" timestamp="1577941004253">
+    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser" timestamp="1577960174162">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser/0.0.1292.768@0.0.1292.768" timestamp="1577941004253" />
+    <state x="451" y="91" key="#com.intellij.ide.util.MemberChooser/0.0.1292.768@0.0.1292.768" timestamp="1577960174162" />
     <state x="364" y="310" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1577513409546">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -327,10 +363,10 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="381" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1292.768@0.0.1292.768" timestamp="1577615182936" />
-    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577874529426">
+    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1577951267644">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577874529426" />
+    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1292.768@0.0.1292.768" timestamp="1577951267644" />
     <state x="427" y="76" key="ExecutionTargetDialog" timestamp="1577524834705">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
@@ -339,46 +375,46 @@
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state x="426" y="126" key="FileChooserDialogImpl/0.0.1292.768@0.0.1292.768" timestamp="1577759003033" />
-    <state width="1248" height="212" key="GridCell.Tab.0.bottom" timestamp="1577949943910">
+    <state width="1292" height="199" key="GridCell.Tab.0.bottom" timestamp="1578192012792">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="212" key="GridCell.Tab.0.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
-    <state width="1248" height="212" key="GridCell.Tab.0.center" timestamp="1577949943910">
+    <state width="1292" height="199" key="GridCell.Tab.0.bottom/0.0.1292.768@0.0.1292.768" timestamp="1578192012792" />
+    <state width="1292" height="199" key="GridCell.Tab.0.center" timestamp="1578192012790">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="212" key="GridCell.Tab.0.center/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
-    <state width="1248" height="212" key="GridCell.Tab.0.left" timestamp="1577949943910">
+    <state width="1292" height="199" key="GridCell.Tab.0.center/0.0.1292.768@0.0.1292.768" timestamp="1578192012790" />
+    <state width="1292" height="199" key="GridCell.Tab.0.left" timestamp="1578192012789">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="212" key="GridCell.Tab.0.left/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
-    <state width="1248" height="212" key="GridCell.Tab.0.right" timestamp="1577949943910">
+    <state width="1292" height="199" key="GridCell.Tab.0.left/0.0.1292.768@0.0.1292.768" timestamp="1578192012789" />
+    <state width="1292" height="199" key="GridCell.Tab.0.right" timestamp="1578192012791">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="212" key="GridCell.Tab.0.right/0.0.1292.768@0.0.1292.768" timestamp="1577949943910" />
-    <state width="1248" height="111" key="GridCell.Tab.1.bottom" timestamp="1577541475392">
+    <state width="1292" height="199" key="GridCell.Tab.0.right/0.0.1292.768@0.0.1292.768" timestamp="1578192012791" />
+    <state width="1248" height="292" key="GridCell.Tab.1.bottom" timestamp="1577974874596">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="111" key="GridCell.Tab.1.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577541475392" />
-    <state width="1248" height="111" key="GridCell.Tab.1.center" timestamp="1577541475392">
+    <state width="1248" height="292" key="GridCell.Tab.1.bottom/0.0.1292.768@0.0.1292.768" timestamp="1577974874596" />
+    <state width="1248" height="292" key="GridCell.Tab.1.center" timestamp="1577974874593">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="111" key="GridCell.Tab.1.center/0.0.1292.768@0.0.1292.768" timestamp="1577541475392" />
-    <state width="1248" height="111" key="GridCell.Tab.1.left" timestamp="1577541475392">
+    <state width="1248" height="292" key="GridCell.Tab.1.center/0.0.1292.768@0.0.1292.768" timestamp="1577974874593" />
+    <state width="1248" height="292" key="GridCell.Tab.1.left" timestamp="1577974874592">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="111" key="GridCell.Tab.1.left/0.0.1292.768@0.0.1292.768" timestamp="1577541475392" />
-    <state width="1248" height="111" key="GridCell.Tab.1.right" timestamp="1577541475392">
+    <state width="1248" height="292" key="GridCell.Tab.1.left/0.0.1292.768@0.0.1292.768" timestamp="1577974874592" />
+    <state width="1248" height="292" key="GridCell.Tab.1.right" timestamp="1577974874595">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state width="1248" height="111" key="GridCell.Tab.1.right/0.0.1292.768@0.0.1292.768" timestamp="1577541475392" />
+    <state width="1248" height="292" key="GridCell.Tab.1.right/0.0.1292.768@0.0.1292.768" timestamp="1577974874595" />
     <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1577524868267">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
     <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1292.768@0.0.1292.768" timestamp="1577524868267" />
-    <state x="167" y="81" key="Maven.ArtifactSearchDialog" timestamp="1577766239088">
+    <state x="167" y="81" key="Maven.ArtifactSearchDialog" timestamp="1577957575128">
       <screen x="0" y="0" width="1292" height="768" />
     </state>
-    <state x="167" y="81" key="Maven.ArtifactSearchDialog/0.0.1292.768@0.0.1292.768" timestamp="1577766239088" />
+    <state x="167" y="81" key="Maven.ArtifactSearchDialog/0.0.1292.768@0.0.1292.768" timestamp="1577957575128" />
     <state x="118" y="0" width="994" height="768" key="SettingsEditor" timestamp="1577765836274">
       <screen x="0" y="0" width="1292" height="768" />
     </state>

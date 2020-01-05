@@ -63,8 +63,9 @@ public class EverythingPlusConfig {
         /**
          * 遍历的目录
          */
-        Iterable<Path> iterable = fileSystem.getRootDirectories();
-        iterable.forEach(path -> config.includePath.add(path.toString()));
+        //Iterable<Path> iterable = fileSystem.getRootDirectories();
+        //iterable.forEach(path -> config.includePath.add(path.toString()));
+        config.includePath.add("D:\\临时文件");
         /**
          * 排除的目录
          * Windows ： C:\Program Files、 C:\Program Files (x86)、 C:\ProgramData

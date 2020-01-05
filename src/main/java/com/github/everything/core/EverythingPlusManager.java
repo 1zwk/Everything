@@ -1,6 +1,7 @@
 package com.github.everything.core;
 
 import com.github.everything.config.EverythingPlusConfig;
+import com.github.everything.core.common.HandlePath;
 import com.github.everything.core.dao.DataSourceFactory;
 import com.github.everything.core.dao.FileIndexDao;
 import com.github.everything.core.dao.impl.FileIndexDaoImpl;
@@ -12,6 +13,8 @@ import com.github.everything.core.interceptor.impl.FilePrintInterceptor;
 import com.github.everything.core.interceptor.impl.ThingClearInterceptor;
 import com.github.everything.core.model.Condition;
 import com.github.everything.core.model.Thing;
+import com.github.everything.core.monitor.FileWatch;
+import com.github.everything.core.monitor.impl.FileWatchImpl;
 import com.github.everything.core.search.FileSearch;
 import com.github.everything.core.search.impl.FileSearchImpl;
 
@@ -30,10 +33,12 @@ import java.util.stream.Collectors;
 
 public class EverythingPlusManager {
 
-
+    //文件监控
+    private FileWatch fileWatch;
 
     private FileSearch fileSearch;
 
+    //文件扫描
     private FileScan fileScan;
 
     private static volatile EverythingPlusManager manager;
@@ -41,7 +46,7 @@ public class EverythingPlusManager {
     //线程池先不固定大小，根据具体使用判断
     private ExecutorService executorService;
 
-    private EverythingPlusManager(){
+    private EverythingPlusManager() {
         this.initComponent();
     }
 
@@ -54,10 +59,10 @@ public class EverythingPlusManager {
 
 
     //单例模式
-    public static EverythingPlusManager getInstance(){
-        if(manager == null){
-            synchronized (EverythingPlusManager.class){
-                if(manager == null){
+    public static EverythingPlusManager getInstance() {
+        if (manager == null) {
+            synchronized (EverythingPlusManager.class) {
+                if (manager == null) {
                     manager = new EverythingPlusManager();
                 }
             }
@@ -92,8 +97,9 @@ public class EverythingPlusManager {
         this.backgroundClearThread.setName("Thread-Thing-Clear");
         this.backgroundClearThread.setDaemon(true);//守护线程   问题:什么是守护线程
 
+
         //文件监控对象
-// TODO       this.fileWatch = new FileWatchImpl(fileIndexDao);
+        this.fileWatch = new FileWatchImpl(fileIndexDao);
 
     }
 
@@ -107,7 +113,8 @@ public class EverythingPlusManager {
 //            DataSourceFactory.initDatabase();
 //        }
 //    }
-    private void initOrResetDatabase(){
+
+    private void initOrResetDatabase() {
         DataSourceFactory.initDatabase();
     }
 
@@ -115,7 +122,7 @@ public class EverythingPlusManager {
     /**
      * 检索
      */
-    public List<Thing> search(Condition condition){
+    public List<Thing> search(Condition condition) {
         //NOTICE 扩展
         //Stream 流式处理
         return this.fileSearch.search(condition)
@@ -124,7 +131,7 @@ public class EverythingPlusManager {
                     File f = new File(path);
                     //如果存在这个文件就返回，如果不存在就删除并且不返回
                     boolean flag = f.exists();
-                    if(!flag){
+                    if (!flag) {
                         //删除
                         thingClearInterceptor.apply(thing);
                     }
@@ -135,17 +142,18 @@ public class EverythingPlusManager {
     /**
      * 索引
      */
-    public void buildIndex(){
+    public void buildIndex() {
         initOrResetDatabase();
         Set<String> directories = EverythingPlusConfig.getInstance().getIncludePath();
         /**
          * 依据目录的大小来创建合适大小的线程池，并且命名
          */
-        if(this.executorService == null){
+        if (this.executorService == null) {
             this.executorService = Executors.newFixedThreadPool(directories.size()
                     , new ThreadFactory() {
                         //一个可能原子性更新的int值，默认为0，也可以以给定参数值开始
                         private final AtomicInteger threadId = new AtomicInteger();
+
                         @Override
                         public Thread newThread(Runnable r) {
                             Thread thread = new Thread(r);
@@ -160,7 +168,7 @@ public class EverythingPlusManager {
 
         System.out.println("Build index start");
         //多线程的把文件建立索引
-        for(String path : directories){
+        for (String path : directories) {
             this.executorService.submit(() -> {
                 EverythingPlusManager.this.fileScan.index(path);
                 //当前任务完成，值-1
@@ -188,6 +196,21 @@ public class EverythingPlusManager {
         } else {
             System.out.println("Cant repeat start BackgroundClearThread");
         }
+    }
+
+    /**
+     * 启动文件监听
+     */
+    public void startFileSystemMonitor(){
+        EverythingPlusConfig config = EverythingPlusConfig.getInstance();
+        HandlePath handlePath = new HandlePath();
+        handlePath.setExcludePath(config.getExcludePath());
+        handlePath.setIncludePath(config.getIncludePath());
+        this.fileWatch.monitor(handlePath);
+        //异步启动，不要阻塞其他线程
+        new Thread(() -> {
+            System.out.println("启动");
+        fileWatch.start();}).start();
     }
 
 

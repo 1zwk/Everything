@@ -29,7 +29,7 @@ public class EverythingCmdApp {
         manager.startBackgroundClearThread();
 
         //启动监控
-//TODO        manager.startFileSystemMonitor();
+        manager.startFileSystemMonitor();
 
         //交互式
         interactive(manager);
@@ -71,10 +71,10 @@ public class EverythingCmdApp {
                 String includePathStr = param.substring(index + 1);
                 String[] includePATHStrs = includePathStr.split(";");
                 //只有在用户输入不为空才重置需要被扫描的set集合。
-                if(includePathStr.length()>0){
+                if (includePathStr.length() > 0) {
                     config.getIncludePath().clear();
                 }
-                for(String p : includePATHStrs){
+                for (String p : includePATHStrs) {
                     config.getIncludePath().add(p);
                 }
             }
@@ -85,10 +85,10 @@ public class EverythingCmdApp {
                 String excludePathStr = param.substring(index + 1);
                 String[] excludePATHStrs = excludePathStr.split(";");
                 //只有在用户输入不为空才重置需要要排除的set集合。
-                if(excludePathStr.length()>0){
+                if (excludePathStr.length() > 0) {
                     config.getExcludePath().clear();
                 }
-                for(String p : excludePATHStrs){
+                for (String p : excludePATHStrs) {
                     config.getExcludePath().add(p);
                 }
             }

@@ -44,7 +44,6 @@
     <!--项目依赖-->
     <!--方法：可以直接alt+insert 打开Dependency 来搜索添加-->
     <dependencies>
-
         <!--mysql数据库-->
         <dependency>
             <groupId>mysql</groupId>
@@ -78,7 +77,12 @@
             <version>1.1.20</version>
         </dependency>
 
-
+        <!--io处理扩展包-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
 
         <!--拼音
         <dependency>
