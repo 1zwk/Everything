@@ -85,6 +85,8 @@ public class FileIndexDaoImpl implements FileIndexDao {
                     String fileType = resultSet.getString("file_type");
                     thing.setFileType(FileType.lookupByName(fileType));
 
+//                    thing.setFileSize(resultSet.getString("file_size"));
+
                     //add返回结果List
                     things.add(thing);
                 }
@@ -111,7 +113,7 @@ public class FileIndexDaoImpl implements FileIndexDao {
                 //1.获取数据库连接
                 connection = dataSource.getConnection();
                 //2.准备SQL语句
-                String sql = "insert into file_index(name, path, depth, file_type) values(?,?,?,?)";
+                String sql = "insert into file_index(name, path, depth, file_type, file_size) values(?,?,?,?,?)";
                 //3.准备命令
                 statement = connection.prepareStatement(sql);
                 //4.设置参数1 2 3 4
@@ -120,6 +122,8 @@ public class FileIndexDaoImpl implements FileIndexDao {
                 statement.setInt(3,thing.getDepth());
                 //枚举 FileType.DOC -> DOC
                 statement.setString(4,thing.getFileType().name());
+
+                statement.setString(5,thing.getFileSize());
 
                 //5.执行命令
                 statement.execute();
@@ -167,7 +171,7 @@ public class FileIndexDaoImpl implements FileIndexDao {
                  * 优化：根据path删除文件，并且如果是目录的话，
                  * 我们在判断这个目录的最终指向文件为空，就把以这个path为前缀的文件都删除
                  *
-                 * 问题：没懂这个以path为前缀的文件都删除
+                 * TODO 问题：没懂这个以path为前缀的文件都删除
                  */
                 String sql = "delete from file_index where path like '\" + thing.getPath() + \"%'";
                 //3.准备命令
@@ -194,7 +198,9 @@ public class FileIndexDaoImpl implements FileIndexDao {
 
         thing.setFileType(FileType.DOC);
 
-//        fileIndexDao.insert(thing);
+        thing.setFileSize("22222");
+
+       fileIndexDao.insert(thing);
 
         Condition condition = new Condition();
         condition.setName("简历");

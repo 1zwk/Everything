@@ -12,7 +12,10 @@ import java.io.File;
  */
 public final class FileConvertThing {
 
+
+
     private FileConvertThing(){}
+
 
     public static Thing convert(File file){
         Thing thing = new Thing();
@@ -20,6 +23,8 @@ public final class FileConvertThing {
         thing.setPath(file.getAbsolutePath());
         thing.setDepth(computeFileDepth(file));
         thing.setFileType(computeFileType(file));
+
+        thing.setFileSize(countFileSize(file));
         return thing;
     }
 
@@ -45,6 +50,21 @@ public final class FileConvertThing {
         }
     }
 
+    private static String[] unit = {"B","KB","MB","GB"};
+    //计算文件大小
+    private static String countFileSize(File file){
+
+        long length = file.length();
+        int indexUnit = 0;
+        long remainder = 0;
+        while(length > 1024){
+            remainder = length % 1024;
+            length = length/1024;
+            indexUnit++;
+        }
+
+        return length + "." + remainder +unit[indexUnit];
+    }
 
 
 

@@ -12,7 +12,7 @@ public enum FileType {
     //图片
     IMG("png","jpeg","jpg","gif"),
     //文档
-    DOC("ppt","pptx","doc","pdf","docx"),
+    DOC("ppt","pptx","doc","pdf","docx","txt"),
     //二进制
     BIN("exe","sh","jar","msi"),
     //归档

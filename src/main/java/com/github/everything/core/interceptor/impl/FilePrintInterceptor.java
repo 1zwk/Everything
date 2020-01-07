@@ -1,12 +1,17 @@
 package com.github.everything.core.interceptor.impl;
 
+import com.github.everything.core.common.FileConvertThing;
 import com.github.everything.core.interceptor.FileInterceptor;
+import com.github.everything.core.model.Thing;
 
 import java.io.File;
 
 public class FilePrintInterceptor implements FileInterceptor {
     @Override
     public void apply(File file) {
-        System.out.println(file.getAbsolutePath());
+        Thing thing = FileConvertThing.convert(file);
+        System.out.println(thing);
+
+//        System.out.println(file.getAbsolutePath());
     }
 }

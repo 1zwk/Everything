@@ -4,12 +4,14 @@ import com.github.everything.config.EverythingPlusConfig;
 import com.github.everything.core.EverythingPlusManager;
 import com.github.everything.core.model.Condition;
 import com.github.everything.core.model.Thing;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class EverythingCmdApp {
     private static Scanner scanner = new Scanner(System.in);
+
 
 
     public static void main(String[] args) {

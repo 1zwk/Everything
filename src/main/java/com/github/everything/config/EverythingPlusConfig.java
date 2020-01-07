@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
+import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 
 import java.io.File;
 import java.nio.file.FileSystem;
@@ -16,11 +18,18 @@ import java.util.Set;
 import java.util.function.Consumer;
 
 /**
- * 配置类:对一些特定的文件或者目录进行排除，换句话说，搜索想要的，不搜索不想要的。
+ * 配置类
  */
 @Getter//使得这里的数据只可以获取不可以修改
 @ToString
 public class EverythingPlusConfig {
+
+    private HanyuPinyinOutputFormat pinyin  = new HanyuPinyinOutputFormat();
+
+    public void test(){
+        pinyin.setCaseType(HanyuPinyinCaseType.LOWERCASE);
+    }
+
 
     private static volatile EverythingPlusConfig config;
 
@@ -54,7 +63,7 @@ public class EverythingPlusConfig {
      */
     //获取当前工程路径。“user.home”获取文件路径
     private String h2IndexPath = System.getProperty("user.dir") + File.separator
-            + "everything_plus";
+            + "Everything-Plus";
 
     //获得初始化默认的系统，
     private void initDefaultPathConfig(){

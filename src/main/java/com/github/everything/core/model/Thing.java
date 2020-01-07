@@ -29,4 +29,15 @@ public class Thing {
      */
     private FileType fileType;
 
+
+    /**
+     * 文件大小
+     */
+    private String FileSize;
+
+
+    /**
+     * 最后修改时间
+     */
+    private String last_modified;
 }
