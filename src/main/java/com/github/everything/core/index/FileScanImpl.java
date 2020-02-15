@@ -1,19 +1,11 @@
-package com.github.everything.core.index.impl;
+package com.github.everything.core.index;
 
 import com.github.everything.config.EverythingPlusConfig;
-import com.github.everything.core.dao.DataSourceFactory;
-import com.github.everything.core.dao.impl.FileIndexDaoImpl;
 import com.github.everything.core.index.FileScan;
 import com.github.everything.core.interceptor.FileInterceptor;
-import com.github.everything.core.interceptor.impl.FileIndexInterceptor;
-import com.github.everything.core.interceptor.impl.FilePrintInterceptor;
-import com.github.everything.core.model.Thing;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * 文件转换类：

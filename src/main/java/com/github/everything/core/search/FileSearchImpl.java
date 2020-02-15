@@ -1,8 +1,6 @@
-package com.github.everything.core.search.impl;
+package com.github.everything.core.search;
 
-import com.github.everything.core.dao.DataSourceFactory;
 import com.github.everything.core.dao.FileIndexDao;
-import com.github.everything.core.dao.impl.FileIndexDaoImpl;
 import com.github.everything.core.model.Condition;
 import com.github.everything.core.model.Thing;
 import com.github.everything.core.search.FileSearch;

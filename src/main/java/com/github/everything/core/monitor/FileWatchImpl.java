@@ -1,7 +1,7 @@
-package com.github.everything.core.monitor.impl;
+package com.github.everything.core.monitor;
 
-import com.github.everything.core.common.FileConvertThing;
-import com.github.everything.core.common.HandlePath;
+import com.github.everything.core.util.FileConvertThing;
+import com.github.everything.core.util.HandlePath;
 import com.github.everything.core.dao.FileIndexDao;
 import com.github.everything.core.monitor.FileWatch;
 import org.apache.commons.io.monitor.FileAlterationListener;
@@ -9,7 +9,6 @@ import org.apache.commons.io.monitor.FileAlterationMonitor;
 import org.apache.commons.io.monitor.FileAlterationObserver;
 
 import java.io.File;
-import java.io.FileFilter;
 
 public class FileWatchImpl implements FileWatch, FileAlterationListener {
     private FileIndexDao fileIndexDao;
@@ -17,7 +16,7 @@ public class FileWatchImpl implements FileWatch, FileAlterationListener {
 
     public FileWatchImpl(FileIndexDao fileIndexDao) {
         this.fileIndexDao = fileIndexDao;
-        this.monitor = new FileAlterationMonitor(10);
+        this.monitor = new FileAlterationMonitor(100);
     }
 
     @Override
@@ -81,12 +80,11 @@ public class FileWatchImpl implements FileWatch, FileAlterationListener {
      */
     @Override
     public void monitor(HandlePath handlePath) {
-
         for (String path : handlePath.getIncludePath()) {
             //传入监视目录和，文件过滤器
             FileAlterationObserver observer =
                     new FileAlterationObserver(path, pathname -> {
-                        String currentPath = pathname.getAbsolutePath();//TODO 问题：这是啥意思？到底返回相对路径还是绝对路径？
+                        String currentPath = pathname.getAbsolutePath();
                         for (String excluedePath : handlePath.getExcludePath()) {
                             if (excluedePath.startsWith(currentPath)) {//因为有可能是目录，所以用startsWIth而不直接“=”
                                 return false;

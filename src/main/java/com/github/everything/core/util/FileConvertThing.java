@@ -1,9 +1,10 @@
-package com.github.everything.core.common;
+package com.github.everything.core.util;
 
 import com.github.everything.core.model.FileType;
 import com.github.everything.core.model.Thing;
 
 import java.io.File;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 辅助工具类：把遍历的文件file类转换为Thing类
@@ -11,6 +12,7 @@ import java.io.File;
  * 因为是内部工具类，并不想外界使用或者new对象，所以通过final和私有构造方法把这个类封闭起来
  */
 public final class FileConvertThing {
+    private static AtomicInteger i = new AtomicInteger(1);
 
 
 
@@ -19,14 +21,19 @@ public final class FileConvertThing {
 
     public static Thing convert(File file){
         Thing thing = new Thing();
+        thing.setId(i.getAndIncrement());
         thing.setName(file.getName());
         thing.setPath(file.getAbsolutePath());
         thing.setDepth(computeFileDepth(file));
         thing.setFileType(computeFileType(file));
-
         thing.setFileSize(countFileSize(file));
+        thing.setLast_modified(String.valueOf(file.lastModified()));
+
         return thing;
     }
+
+
+
 
     //计算文件深度
     private static int computeFileDepth(File file){

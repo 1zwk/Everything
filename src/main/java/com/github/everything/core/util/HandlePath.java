@@ -1,4 +1,4 @@
-package com.github.everything.core.common;
+package com.github.everything.core.util;
 
 import lombok.Data;
 

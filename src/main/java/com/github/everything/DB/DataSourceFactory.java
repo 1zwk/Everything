@@ -1,19 +1,13 @@
-package com.github.everything.core.dao;
+package com.github.everything.DB;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.github.everything.config.EverythingPlusConfig;
-import org.apache.commons.io.IOUtils;
-import sun.nio.ch.IOUtil;
 
 import javax.sql.DataSource;
-import javax.xml.crypto.Data;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.SQLOutput;
-import java.util.function.Predicate;
-import java.util.zip.DataFormatException;
 
 /**
  * 创建数据源 的 单例工厂类
@@ -24,9 +18,10 @@ public class DataSourceFactory {
      */
     private static volatile DruidDataSource dataSource;
 
-    private DataSourceFactory() {}
+    private DataSourceFactory() {
+    }
 
-    //建立数据源
+    //    建立数据源
     public static DataSource dataSource() {
         if (dataSource == null) {
             synchronized (DataSourceFactory.class) {
@@ -95,8 +90,8 @@ public class DataSourceFactory {
             //3.3执行SQL语句
             statement.execute();
             //3.4关闭连接
-            connection.close();
             statement.close();
+            connection.close();
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
@@ -120,7 +115,15 @@ public class DataSourceFactory {
 //        }catch(IOException e){
 //
 //        }
-        initDatabase();
-
+        //initDatabase();
+        DataSource db = dataSource();
+        try {
+            Connection connection = db.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+//        initDatabase();
+        System.out.println("jdbc:h2:" + EverythingPlusConfig.getInstance()
+                .getH2IndexPath());
     }
 }
