@@ -1,5 +1,5 @@
 
-## 一个简约的everthing java版
+## 一个everthing java版
 
 
 ### 项目目的：实现命令行下的文件快速搜索
