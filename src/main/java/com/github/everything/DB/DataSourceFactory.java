@@ -99,31 +99,5 @@ public class DataSourceFactory {
 
     }
 
-    //测试
-    public static void main(String[] args) {
-//        //演示IO包的使用
-//        try(InputStream in  = DataSourceFactory.class.getClassLoader()
-//                .getResourceAsStream("everything_plus.sql")){
-////            String sql = IOUtils.toString(in);
-////            System.out.println(sql);
-//            IOUtils.readLines(in).stream().filter(new Predicate<String>() {
-//                @Override
-//                public boolean test(String line) {
-//                    return !line.startsWith("--");
-//                }
-//            }).forEach(line -> System.out.println(line));
-//        }catch(IOException e){
-//
-//        }
-        //initDatabase();
-        DataSource db = dataSource();
-        try {
-            Connection connection = db.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-//        initDatabase();
-        System.out.println("jdbc:h2:" + EverythingPlusConfig.getInstance()
-                .getH2IndexPath());
-    }
+   
 }
